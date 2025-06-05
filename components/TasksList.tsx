@@ -12,13 +12,14 @@ const TasksList = () => {
 		},
 		{
 			id: 3,
-			content: 'Item3',
+			content: 'Lorem ',
 		},
 	]
 	return (
 		<div className='space-y-3'>
 			{data.map(item => (
-				<Task {...item} key={item.id}/>
+				<Task {...item} key={item.id} />
+        
 			))}
 		</div>
 	)

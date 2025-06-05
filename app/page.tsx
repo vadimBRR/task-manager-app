@@ -3,7 +3,6 @@ import TasksList from '@/components/TasksList'
 import Image from 'next/image'
 
 export default function Home() {
-	
 	return (
 		<div className='max-w-3xl mx-auto space-y-5 py-10'>
 			{/* <h1>Hello</h1> */}
@@ -14,11 +13,9 @@ export default function Home() {
 				</h3>
 			</div>
 
-      <NewTask/>
+			<NewTask />
 
-
-
-			<TasksList/>
+			<TasksList />
 		</div>
 	)
 }
