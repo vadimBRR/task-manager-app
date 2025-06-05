@@ -1,14 +1,39 @@
-"use client"
-const NewTask = () => {
+'use client'
 
-  return (
-    <form action={()=>{}} className='grid grid-cols-[1fr_200px] '>
-      <input name='task' className='w-full p-4 outline-none bg-input border border-white/15 rounded-xl shadow text-xl rounded-r-none flex-1 focus:border-indigo-300/50 duration-100'></input>
-      <button type='submit' className='w- bg-indigo-600 text-xl duration-300 cursor-pointer scale-100 hover:scale-103 hover:bg-indigo-500'>
-        Add Task
-      </button>
-    </form>
-  )
+import { useActionsTodo, useTodos } from '@/store/todoStore'
+import { useState } from 'react'
+
+const NewTask = () => {
+	const { addTodo } = useActionsTodo()
+	const [value, setValue] = useState('')
+
+	const handleAddTodo = (e: React.FormEvent) => {
+		e.preventDefault()
+		if (value.trim()) {
+			addTodo(value)
+			setValue('')
+		}
+	}
+
+	return (
+		<form
+			onSubmit={e => handleAddTodo(e)}
+			className='grid grid-cols-[1fr_200px] '
+		>
+			<input
+				className='w-full p-4 outline-none bg-input border border-white/15 rounded-xl shadow text-xl rounded-r-none flex-1 focus:border-indigo-300/50 duration-100'
+				placeholder='Kill someone'
+				value={value}
+				onChange={e => setValue(e.currentTarget.value)}
+			></input>
+			<button
+				type='submit'
+				className=' bg-indigo-600 text-xl duration-300 cursor-pointer scale-100 hover:scale-103 hover:bg-indigo-500'
+			>
+				Add Task
+			</button>
+		</form>
+	)
 }
 
 export default NewTask
