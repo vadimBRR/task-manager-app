@@ -9,6 +9,8 @@
   --color-accent: #655BEF;
   --color-input: #f1f1f1;
   --color-task-card: #f9f9f9;
+    --color-border: rgba(243, 244, 246, 0.1);
+
 }
 
 @theme inline {
@@ -26,7 +28,8 @@
     --color-primary: #7B3FE4;
     --color-primary-hover: #9D6BFF;
     --color-accent: #655BEF;
-    --color-input: #1E1B2E;
+    --color-input: rgb(12, 17, 28);
+    --color-border: rgba(243, 244, 246, 0.1);
     --color-task-card: #1A1826;
   }
 }
@@ -62,6 +65,10 @@
 
   .text-accent {
     color: var(--color-accent);
+  }
+
+  .custom-border {
+    border-color: var(--color-border)
   }
 }
 
