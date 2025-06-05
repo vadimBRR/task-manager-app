@@ -25,7 +25,7 @@ export default function RootLayout({
 	return (
 		<html lang='en'>
 			<body className={`${poppins.className} antialiased`}>
-				<div className='w-54 h-54 bg-gradient-to-r from-blue-500 to-violet-500 absolute left-1/2 -translate-x-1/2 blur-3xl opacity-30 top-2 z-0'></div>
+				<div className='w-2/3 h-2/3 bg-gradient-to-r from-blue-500 to-violet-500 fixed left-1/2 -translate-x-1/2 blur-3xl opacity-30 top-1/2 -translate-y-1/2 z-0 skew-x-8'></div>
 				<div className='relative z-10'>{children}</div>
 			</body>
 		</html>

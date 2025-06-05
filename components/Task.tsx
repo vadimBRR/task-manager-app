@@ -1,8 +1,9 @@
-import { useActionsTodo } from '@/store/todoStore'
+// import { useActionsTodo } from '@/store/todoStore'
+import { useTodo, useTodos } from '@/store/todoStore'
 import { PencilSquareIcon, TrashIcon } from '@heroicons/react/16/solid'
 
 const Task = ({ id, content, completed }: { id: string; content: string, completed:boolean }) => {
-  const {toggleCompleted, removeTodo} = useActionsTodo()
+  const {toggleCompleted, removeTodo} = useTodo()
 
 
 	return (

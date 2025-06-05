@@ -1,10 +1,10 @@
 'use client'
 
-import { useActionsTodo, useTodos } from '@/store/todoStore'
+import { useTodo } from '@/store/todoStore'
 import { useState } from 'react'
 
 const NewTask = () => {
-	const { addTodo } = useActionsTodo()
+	const { addTodo } = useTodo()
 	const [value, setValue] = useState('')
 
 	const handleAddTodo = (e: React.FormEvent) => {
