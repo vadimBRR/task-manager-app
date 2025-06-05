@@ -3,6 +3,12 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+
+  --color-primary: #7B3FE4;
+  --color-primary-hover: #9D6BFF;
+  --color-accent: #655BEF;
+  --color-input: #f1f1f1;
+  --color-task-card: #f9f9f9;
 }
 
 @theme inline {
@@ -14,10 +20,51 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: rgb(3, 7, 18);
+    --foreground: #F5F5F5;
+
+    --color-primary: #7B3FE4;
+    --color-primary-hover: #9D6BFF;
+    --color-accent: #655BEF;
+    --color-input: #1E1B2E;
+    --color-task-card: #1A1826;
   }
 }
+
+@layer utilities {
+  .bg-background {
+    background-color: var(--background);
+  }
+
+  .bg-task-card {
+    background-color: var(--color-task-card);
+  }
+
+  .bg-input {
+    background-color: var(--color-input);
+  }
+
+  .bg-primary {
+    background-color: var(--color-primary);
+  }
+
+  .bg-primary-hover {
+    background-color: var(--color-primary-hover);
+  }
+
+  .text-foreground {
+    color: var(--foreground);
+  }
+
+  .text-primary {
+    color: var(--color-primary);
+  }
+
+  .text-accent {
+    color: var(--color-accent);
+  }
+}
+
 
 body {
   background: var(--background);
